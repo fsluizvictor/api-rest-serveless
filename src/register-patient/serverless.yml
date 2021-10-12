@@ -1,4 +1,3 @@
-
 service: register-patient
 plugins:
   - serverless-offline
@@ -15,32 +14,30 @@ provider:
 functions:
   showPatients:
     handler: handler.showPatients
-    events: 
+    events:
       - http:
           path: patients
           method: get
 
   showPatient:
     handler: handler.showPatient
-    events: 
+    events:
       - http:
           path: patients/{patientId}
           method: get
 
 resources:
   Resources:
-    PatientsTable:
-    Type: Table:
+    PacientesTable:
       Type: AWS::DynamoDB::Table
       Properties:
+        TableName: PATIENTS
+        AttributeDefinitions:
+          - AttributeName: patient_id
+            AttributeType: S
         KeySchema:
-          - AttributeName: patient_id 
-            KeyType: S
-        KeySchema:
-          - AttributeName: patient_id 
+          - AttributeName: patient_id
             KeyType: HASH
         ProvisionedThroughput:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
-        
-  

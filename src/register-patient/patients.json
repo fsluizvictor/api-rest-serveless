@@ -1,0 +1,101 @@
+{
+    "PATIENTS": [
+      {
+        "PutRequest": {
+          "Item": {
+            "born_date": {
+              "S": "1984-01-01"
+            },
+            "email": {
+              "S": "humberto@mail.com"
+            },
+            "name": {
+              "S": "Humberto"
+            },
+            "patient_id": {
+              "S": "1234-abc"
+            },
+            "status": {
+              "BOOL": true
+            },
+            "number": {
+              "S": "11999995555"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "born_date": {
+              "S": "1975-01-01"
+            },
+            "email": {
+              "S": "maria@mail.com"
+            },
+            "name": {
+              "S": "Maria"
+            },
+            "patient_id": {
+              "S": "1234-def"
+            },
+            "status": {
+              "BOOL": true
+            },
+            "number": {
+              "S": "11999995550"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "born_date": {
+              "S": "1990-01-01"
+            },
+            "email": {
+              "S": "carol@mail.com"
+            },
+            "name": {
+              "S": "Carolina"
+            },
+            "patient_id": {
+              "S": "523-xxx"
+            },
+            "status": {
+              "BOOL": true
+            },
+            "number": {
+              "S": "11999990000"
+            }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "born_date": {
+              "S": "2006-01-01"
+            },
+            "email": {
+              "S": "natalia@mail.com"
+            },
+            "name": {
+              "S": "Natalia"
+            },
+            "patient_id": {
+              "S": "621-nnn"
+            },
+            "status": {
+              "BOOL": true
+            },
+            "number": {
+              "S": "11999998877"
+            }
+          }
+        }
+      }
+    ]
+  }
+  
