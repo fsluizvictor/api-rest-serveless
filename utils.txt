@@ -1,0 +1,15 @@
+== ENDPOINSTS ==
+
+- GET /patients
+
+- GET /patients/id
+
+- POST /patients
+
+- PUT /patients/id
+
+- DELETE /patients/id
+
+== WORKFLOW ==
+
+FRONTEND -> API GATEWAY -> LAMBDAS
