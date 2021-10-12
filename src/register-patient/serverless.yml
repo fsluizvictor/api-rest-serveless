@@ -26,3 +26,21 @@ functions:
       - http:
           path: patients/{patientId}
           method: get
+
+resources:
+  Resources:
+    PatientsTable:
+    Type: Table:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        KeySchema:
+          - AttributeName: patient_id 
+            KeyType: S
+        KeySchema:
+          - AttributeName: patient_id 
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+        
+  
