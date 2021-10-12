@@ -17,3 +17,36 @@ module.exports.showPatients = async event => {
    )
  }
 }
+
+module.exports.showPatient = async event => {
+  
+  const {
+    patientId
+  } = event.pathParameters
+
+  const patient = patients.find((component) => component.id == patientId )
+
+  if(!patient){
+    return {
+      statusCode: 404,
+      body: JSON.stringify(
+        {
+          error: "Not found"
+        },
+        null,
+        2
+      )
+    }  
+  }
+  
+  return {
+    statusCode: 200,
+    body: JSON.stringify(
+      {
+        patient
+      },
+      null,
+      2
+    )
+  }
+ }

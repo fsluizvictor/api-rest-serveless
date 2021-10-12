@@ -4,6 +4,8 @@
 
 - GET /patients/id
 
+404 - {"error" : "Not found"}
+
 - POST /patients
 
 - PUT /patients/id

@@ -1,5 +1,7 @@
 
 service: register-patient
+plugins:
+  - serverless-offline
 frameworkVersion: '2'
 
 provider:
@@ -16,4 +18,11 @@ functions:
     events: 
       - http:
           path: patients
+          method: get
+
+  showPatient:
+    handler: handler.showPatient
+    events: 
+      - http:
+          path: patients/{patientId}
           method: get
