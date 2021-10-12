@@ -1,4 +1,4 @@
-# api-rest-serveless
+# Api-REST-Serveless
 
 This repository contains a simple project that is a rest api, the principal objective is look any AWS services, how lambdas function and the service api gateway.
 
@@ -12,6 +12,4 @@ The Serverless Framework is a free and open-source web framework written using N
 * DynamoDB
 * AWS lambda
 
-## Database:
-* Cassandra (Database NOSQL)
 
