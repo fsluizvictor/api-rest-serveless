@@ -11,6 +11,16 @@ provider:
   stage: dev
   region: us-east-1
 
+iamRoleStatements:
+  - Effect: Allow
+    Action:
+      - dynamodb:Query
+      - dynamodb:Scan
+      - dynamodb:PutItem
+      - dynamodb:DeleteItem
+      - dynamodb:GetItem
+    Resource: arn:aws:dynamodb:us-east-1:306891557711:table/PATIENTS
+
 functions:
   showPatients:
     handler: handler.showPatients
@@ -28,7 +38,7 @@ functions:
 
 resources:
   Resources:
-    PacientesTable:
+    PatientsTable:
       Type: AWS::DynamoDB::Table
       Properties:
         TableName: PATIENTS
